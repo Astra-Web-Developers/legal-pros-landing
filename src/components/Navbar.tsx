@@ -12,10 +12,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-sm border-b border-border shadow-sm" style={{ backgroundColor: '#10273D' }}>
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <div>
-            <h1 className="text-xl font-bold text-white">Despacho Legal</h1>
-            <p className="text-xs text-white/70">Abogados & Asociados</p>
-          </div>
+          <h1 className="text-xl font-bold text-white">Despacho Legal</h1>
           
           <div className="hidden md:flex items-center gap-6">
             <button 
