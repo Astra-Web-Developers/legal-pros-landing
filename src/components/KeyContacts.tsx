@@ -12,7 +12,7 @@ const KeyContacts = () => {
               Lawyers in Mexico City
             </h2>
             <div className="space-y-6" style={{ fontFamily: 'Times New Roman, serif' }}>
-              <p className="text-lg leading-relaxed text-primary">
+              <p className="text-lg leading-relaxed text-primary font-sans">
                 Situated in the heart of Mexico City near the hotel district in Polanco, the Curtis Mexico City law office is not only the base of the firm's Mexico practice, but also an integral part of the firm's broader Latin American practice.
               </p>
               <p className="text-lg leading-relaxed text-primary">
