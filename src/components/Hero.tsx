@@ -1,7 +1,12 @@
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
+import { Tabs, TabsList, TabsTrigger } from "./ui/tabs";
 import buildingBg from "@/assets/building-background.png";
 
-const Hero = () => {
+interface HeroProps {
+  activeTab: string;
+  setActiveTab: (tab: string) => void;
+}
+
+const Hero = ({ activeTab, setActiveTab }: HeroProps) => {
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-20">
       <div 
@@ -38,7 +43,7 @@ const Hero = () => {
             </div>
           </div>
 
-          <Tabs defaultValue="descripcion" className="w-full">
+          <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
             <TabsList className="grid w-full grid-cols-3 bg-white/10 backdrop-blur-sm">
               <TabsTrigger 
                 value="descripcion" 
@@ -59,31 +64,6 @@ const Hero = () => {
                 Noticias y Eventos
               </TabsTrigger>
             </TabsList>
-            <TabsContent value="descripcion" className="text-white mt-8 text-left">
-              <div className="bg-white/10 backdrop-blur-sm p-8 rounded-lg">
-                <p className="text-lg leading-relaxed" style={{ fontFamily: 'Times New Roman, serif' }}>
-                  Nuestra oficina en Ciudad de México representa el corazón de nuestras operaciones en México. 
-                  Con más de 25 años de experiencia, ofrecemos servicios legales de la más alta calidad en el 
-                  centro financiero y político del país.
-                </p>
-              </div>
-            </TabsContent>
-            <TabsContent value="equipo" className="text-white mt-8 text-left">
-              <div className="bg-white/10 backdrop-blur-sm p-8 rounded-lg">
-                <p className="text-lg leading-relaxed" style={{ fontFamily: 'Times New Roman, serif' }}>
-                  Nuestro equipo en Ciudad de México está compuesto por abogados altamente capacitados con 
-                  experiencia en diversas áreas del derecho, comprometidos con la excelencia y el servicio al cliente.
-                </p>
-              </div>
-            </TabsContent>
-            <TabsContent value="noticias" className="text-white mt-8 text-left">
-              <div className="bg-white/10 backdrop-blur-sm p-8 rounded-lg">
-                <p className="text-lg leading-relaxed" style={{ fontFamily: 'Times New Roman, serif' }}>
-                  Manténgase informado sobre nuestras últimas noticias, eventos y logros. Próximamente 
-                  compartiremos actualizaciones importantes sobre nuestros casos y participación en eventos legales.
-                </p>
-              </div>
-            </TabsContent>
           </Tabs>
         </div>
       </div>
