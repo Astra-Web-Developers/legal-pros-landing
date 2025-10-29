@@ -7,6 +7,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Award, Quote } from "lucide-react";
+import Autoplay from "embla-carousel-autoplay";
 
 const Showcase = () => {
   const slides = [
@@ -47,6 +48,11 @@ const Showcase = () => {
             align: "start",
             loop: true,
           }}
+          plugins={[
+            Autoplay({
+              delay: 4000,
+            }),
+          ]}
           className="w-full max-w-5xl mx-auto"
         >
           <CarouselContent>
