@@ -25,32 +25,36 @@ const features = [
 
 const WhyUs = () => {
   return (
-    <section id="nosotros" className="py-24 bg-primary text-primary-foreground">
-      <div className="container mx-auto px-4 max-w-7xl">
-        <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-light mb-6" style={{ fontFamily: 'Times New Roman, serif' }}>
+    <section id="nosotros" className="py-32 bg-black text-white">
+      <div className="container mx-auto px-6 max-w-7xl">
+        <div className="text-center mb-24 animate-fade-in-up">
+          <p className="text-accent text-xs md:text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: 'Inter, sans-serif' }}>
+            Nuestra Propuesta
+          </p>
+          <h2 className="text-4xl md:text-6xl font-light mb-8" style={{ fontFamily: 'Times New Roman, serif' }}>
             ¿Por Qué Elegirnos?
           </h2>
-          <div className="w-16 h-px bg-accent mx-auto mb-6"></div>
-          <p className="text-base text-primary-foreground/70 max-w-2xl mx-auto font-light leading-relaxed">
+          <div className="w-20 h-px bg-accent mx-auto mb-8"></div>
+          <p className="text-base md:text-lg text-white/70 max-w-3xl mx-auto font-light leading-relaxed" style={{ fontFamily: 'Inter, sans-serif' }}>
             Combinamos experiencia, dedicación y un historial probado de éxito 
             para ofrecer el mejor servicio legal.
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-16">
           {features.map((feature, index) => (
             <div 
               key={index}
-              className="text-center group"
+              className="text-center group animate-fade-in-up"
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="mb-6 inline-flex p-5 bg-white/5 group-hover:bg-white/10 transition-all duration-500">
-                <feature.icon className="h-8 w-8 text-accent" strokeWidth={1.5} />
+              <div className="mb-8 inline-flex p-6 border border-white/10 group-hover:border-accent transition-all duration-500">
+                <feature.icon className="h-10 w-10 text-accent" strokeWidth={1} />
               </div>
-              <h3 className="text-lg font-light mb-3" style={{ fontFamily: 'Times New Roman, serif' }}>
+              <h3 className="text-xl font-light mb-4" style={{ fontFamily: 'Times New Roman, serif' }}>
                 {feature.title}
               </h3>
-              <p className="text-sm text-primary-foreground/60 leading-relaxed font-light">
+              <p className="text-sm text-white/60 leading-relaxed font-light" style={{ fontFamily: 'Inter, sans-serif' }}>
                 {feature.description}
               </p>
             </div>

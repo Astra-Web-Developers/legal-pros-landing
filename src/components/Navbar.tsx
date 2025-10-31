@@ -9,40 +9,47 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-sm border-b border-border shadow-sm" style={{ backgroundColor: '#10273D' }}>
-      <div className="container mx-auto px-4 py-4">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-border shadow-sm transition-all duration-300">
+      <div className="container mx-auto px-6 py-5">
         <div className="flex items-center justify-between">
-          <h1 className="text-xl font-bold text-white">Despacho Legal</h1>
+          <h1 className="text-xl font-light tracking-wide text-foreground" style={{ fontFamily: 'Times New Roman, serif' }}>
+            DESPACHO LEGAL
+          </h1>
           
-          <div className="hidden md:flex items-center gap-6">
-            <button 
-              onClick={() => scrollToSection("servicios")}
-              className="text-sm font-medium text-white hover:text-accent transition-colors"
-            >
-              Servicios
-            </button>
+          <div className="hidden md:flex items-center gap-8">
             <button 
               onClick={() => scrollToSection("nosotros")}
-              className="text-sm font-medium text-white hover:text-accent transition-colors"
+              className="text-sm font-light text-foreground hover:text-accent transition-all duration-300"
+              style={{ fontFamily: 'Inter, sans-serif' }}
             >
               Nosotros
             </button>
             <button 
+              onClick={() => scrollToSection("proyectos")}
+              className="text-sm font-light text-foreground hover:text-accent transition-all duration-300"
+              style={{ fontFamily: 'Inter, sans-serif' }}
+            >
+              Proyectos
+            </button>
+            <button 
               onClick={() => scrollToSection("equipo")}
-              className="text-sm font-medium text-white hover:text-accent transition-colors"
+              className="text-sm font-light text-foreground hover:text-accent transition-all duration-300"
+              style={{ fontFamily: 'Inter, sans-serif' }}
             >
               Equipo
             </button>
             <button 
               onClick={() => scrollToSection("testimonios")}
-              className="text-sm font-medium text-white hover:text-accent transition-colors"
+              className="text-sm font-light text-foreground hover:text-accent transition-all duration-300"
+              style={{ fontFamily: 'Inter, sans-serif' }}
             >
               Testimonios
             </button>
             <Button 
-              variant="gold" 
+              variant="default" 
               size="sm"
               onClick={() => scrollToSection("contacto")}
+              className="bg-accent hover:bg-accent/90 text-black font-light"
             >
               Contacto
             </Button>

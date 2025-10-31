@@ -47,41 +47,45 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section id="proyectos" className="py-24 bg-background">
-      <div className="container mx-auto px-4 max-w-7xl">
-        <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-light text-foreground mb-6" style={{ fontFamily: 'Times New Roman, serif' }}>
+    <section id="proyectos" className="py-32 bg-white">
+      <div className="container mx-auto px-6 max-w-7xl">
+        <div className="text-center mb-24 animate-fade-in-up">
+          <p className="text-accent text-xs md:text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: 'Inter, sans-serif' }}>
+            Casos de Éxito
+          </p>
+          <h2 className="text-4xl md:text-6xl font-light text-foreground mb-8" style={{ fontFamily: 'Times New Roman, serif' }}>
             Proyectos Destacados
           </h2>
-          <div className="w-16 h-px bg-accent mx-auto"></div>
+          <div className="w-20 h-px bg-accent mx-auto"></div>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
           {projects.map((project, index) => (
             <Card 
               key={index}
-              className="border border-border hover:border-accent transition-all duration-500 group bg-card shadow-sm hover:shadow-elegant"
+              className="border border-border/50 hover:border-accent/50 transition-all duration-700 group bg-card hover:shadow-elegant animate-fade-in-up"
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <CardContent className="p-8">
-                <div className="flex justify-between items-start mb-4">
-                  <span className="text-xs tracking-widest text-muted-foreground uppercase">
+              <CardContent className="p-10">
+                <div className="flex justify-between items-start mb-6">
+                  <span className="text-xs tracking-[0.2em] text-accent uppercase font-light" style={{ fontFamily: 'Inter, sans-serif' }}>
                     {project.area}
                   </span>
-                  <span className="text-xs text-muted-foreground">
+                  <span className="text-xs text-muted-foreground font-light" style={{ fontFamily: 'Inter, sans-serif' }}>
                     {project.year}
                   </span>
                 </div>
                 
-                <h3 className="text-xl font-light mb-4 text-foreground group-hover:text-accent transition-colors duration-300" style={{ fontFamily: 'Times New Roman, serif' }}>
+                <h3 className="text-2xl font-light mb-6 text-foreground group-hover:text-accent transition-colors duration-500 leading-tight" style={{ fontFamily: 'Times New Roman, serif' }}>
                   {project.title}
                 </h3>
                 
-                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                <p className="text-sm text-muted-foreground leading-relaxed mb-6 font-light" style={{ fontFamily: 'Inter, sans-serif' }}>
                   {project.description}
                 </p>
                 
-                <div className="pt-4 border-t border-border">
-                  <p className="text-xs text-muted-foreground italic">
+                <div className="pt-6 border-t border-border/30">
+                  <p className="text-xs text-muted-foreground font-light" style={{ fontFamily: 'Inter, sans-serif' }}>
                     {project.client}
                   </p>
                 </div>

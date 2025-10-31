@@ -8,7 +8,7 @@ interface HeroProps {
 
 const Hero = ({ activeTab, setActiveTab }: HeroProps) => {
   return (
-    <section className="relative h-[70vh] flex flex-col justify-between pt-20 pb-8">
+    <section className="relative h-screen flex flex-col justify-between pt-20 pb-12">
       <div 
         className="absolute inset-0 z-0"
         style={{
@@ -18,52 +18,53 @@ const Hero = ({ activeTab, setActiveTab }: HeroProps) => {
         }}
       />
       <div 
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundColor: 'rgba(0, 0, 0, 0.4)',
-        }}
+        className="absolute inset-0 z-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70"
       />
       
-      <div className="container mx-auto px-4 relative z-10 flex-1 flex flex-col justify-center">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-light text-white mb-8" style={{ fontFamily: 'Times New Roman, serif' }}>
-            Ubicaciones
+      <div className="container mx-auto px-4 relative z-10 flex-1 flex flex-col justify-center items-center">
+        <div className="max-w-5xl mx-auto text-center">
+          <p className="text-accent text-sm md:text-base tracking-[0.3em] uppercase mb-6 animate-fade-in" style={{ fontFamily: 'Inter, sans-serif' }}>
+            Excelencia Legal
+          </p>
+          
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-light text-white mb-10 leading-tight animate-fade-in-up" style={{ fontFamily: 'Times New Roman, serif', animationDelay: '0.2s' }}>
+            Despacho Legal
           </h1>
           
-          <div className="text-white font-light space-y-4" style={{ fontFamily: 'Times New Roman, serif' }}>
-            <h2 className="text-3xl md:text-4xl mb-6">Ciudad de México</h2>
-            <p className="text-xl md:text-2xl leading-relaxed">
-              Rubén Darío 281, Piso 9<br />
-              Col. Bosque de Chapultepec I Sección<br />
-              Ciudad de México, 11580
-            </p>
-            <div className="space-y-2 text-lg md:text-xl mt-6">
-              <p>Teléfono +52 55 5282 1100</p>
-              <p>Teléfono +52 55 5282 0061</p>
-            </div>
+          <p className="text-white/90 text-lg md:text-xl font-light max-w-3xl mx-auto mb-12 leading-relaxed animate-fade-in-up" style={{ fontFamily: 'Inter, sans-serif', animationDelay: '0.4s' }}>
+            Ubicados en el corazón de Ciudad de México, ofrecemos soluciones legales estratégicas con más de 25 años de experiencia
+          </p>
+          
+          <div className="text-white/80 font-light space-y-3 mb-12 animate-fade-in-up" style={{ fontFamily: 'Inter, sans-serif', animationDelay: '0.6s' }}>
+            <p className="text-base md:text-lg">Rubén Darío 281, Piso 9</p>
+            <p className="text-base md:text-lg">Bosque de Chapultepec, Ciudad de México, 11580</p>
+            <p className="text-sm md:text-base mt-4">Tel: +52 55 5282 1100 | +52 55 5282 0061</p>
           </div>
         </div>
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl mx-auto">
+      <div className="container mx-auto px-4 relative z-10 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
+        <div className="max-w-5xl mx-auto">
           <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-            <TabsList className="grid w-full grid-cols-3 bg-white/10 backdrop-blur-sm">
+            <TabsList className="grid w-full grid-cols-3 bg-black/30 backdrop-blur-md border border-white/10">
               <TabsTrigger 
                 value="descripcion" 
-                className="data-[state=active]:bg-white/20 data-[state=active]:text-white text-white/70"
+                className="data-[state=active]:bg-accent data-[state=active]:text-black text-white/80 transition-all duration-300 font-light"
+                style={{ fontFamily: 'Inter, sans-serif' }}
               >
                 Descripción General
               </TabsTrigger>
               <TabsTrigger 
                 value="equipo"
-                className="data-[state=active]:bg-white/20 data-[state=active]:text-white text-white/70"
+                className="data-[state=active]:bg-accent data-[state=active]:text-black text-white/80 transition-all duration-300 font-light"
+                style={{ fontFamily: 'Inter, sans-serif' }}
               >
                 Equipo
               </TabsTrigger>
               <TabsTrigger 
                 value="noticias"
-                className="data-[state=active]:bg-white/20 data-[state=active]:text-white text-white/70"
+                className="data-[state=active]:bg-accent data-[state=active]:text-black text-white/80 transition-all duration-300 font-light"
+                style={{ fontFamily: 'Inter, sans-serif' }}
               >
                 Noticias y Eventos
               </TabsTrigger>
