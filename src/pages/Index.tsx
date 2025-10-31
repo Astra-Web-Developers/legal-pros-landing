@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 import KeyContacts from "@/components/KeyContacts";
 import Showcase from "@/components/Showcase";
 import WhyUs from "@/components/WhyUs";
+import Projects from "@/components/Projects";
 import Team from "@/components/Team";
 import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
@@ -19,6 +20,7 @@ const Index = () => {
       <KeyContacts activeTab={activeTab} />
       <Showcase />
       <WhyUs />
+      <Projects />
       <Team />
       <Testimonials />
       <Contact />
