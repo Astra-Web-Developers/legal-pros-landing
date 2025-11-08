@@ -1,12 +1,14 @@
 import { Card, CardContent } from "./ui/card";
 import { Quote, Star } from "lucide-react";
+import veronicaImg from "@/assets/veronica-gonzalez.png";
 
 const testimonials = [
   {
     name: "Dra. Veronica Gonzalez",
     role: "Derecho Familiar",
     content: "No sé qué sería de mí sin su ayuda, lo recomiendo sin duda alguna, me orientó y tranquilizó desde el primer momento, es de los pocos abogados honestos y humanos que quedan, es muy profesional y me explicaba todo a detalle, además el trámite fue incluso un poco más rápido de lo que me comentó en un principio.",
-    rating: 5
+    rating: 5,
+    image: veronicaImg
   },
   {
     name: "Federico Gutiérrez",
@@ -42,6 +44,15 @@ const Testimonials = () => {
               style={{ animationDelay: `${index * 0.15}s` }}
             >
               <CardContent className="p-10">
+                {testimonial.image && (
+                  <div className="mb-8 flex justify-center">
+                    <img 
+                      src={testimonial.image} 
+                      alt={testimonial.name}
+                      className="w-24 h-24 rounded-full object-cover border-2 border-accent/20"
+                    />
+                  </div>
+                )}
                 <Quote className="h-12 w-12 text-accent/15 mb-8" strokeWidth={1} />
                 <div className="flex gap-1 mb-8">
                   {[...Array(testimonial.rating)].map((_, i) => (
