@@ -1,4 +1,5 @@
 import { Button } from "./ui/button";
+import logo from "@/assets/logo.png";
 
 const Navbar = () => {
   const scrollToSection = (id: string) => {
@@ -12,9 +13,9 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-border shadow-sm transition-all duration-300">
       <div className="container mx-auto px-6 py-5">
         <div className="flex items-center justify-between">
-          <h1 className="text-xl font-light tracking-wide text-foreground" style={{ fontFamily: 'Times New Roman, serif' }}>
-            DESPACHO LEGAL
-          </h1>
+          <div className="flex items-center gap-4">
+            <img src={logo} alt="The Law Offices of George W. Rodriguez" className="h-12 w-auto" />
+          </div>
           
           <div className="hidden md:flex items-center gap-8">
             <button 
