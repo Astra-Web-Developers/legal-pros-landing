@@ -1,80 +1,103 @@
 import { Card, CardContent } from "./ui/card";
-import { Linkedin, Mail } from "lucide-react";
 
-const team = [
+const education = [
   {
-    name: "Dr. Carlos Mendoza",
-    role: "Socio Director",
-    specialization: "Derecho Mercantil y Civil",
-    experience: "30 años de experiencia",
-    description: "Especialista en derecho mercantil con amplia trayectoria en operaciones corporativas."
+    institution: "Loyola Law School",
+    subtitle: "Loyola Marymount University",
+    location: "Los Angeles",
+    degree: "Juris Doctor 1994",
+    honors: "Magna Cum Laude"
   },
   {
-    name: "Dra. María González",
-    role: "Socia",
-    specialization: "Derecho Laboral y Penal",
-    experience: "25 años de experiencia",
-    description: "Experta en litigios laborales y defensa penal con reconocimiento nacional."
-  },
+    institution: "United States Naval Academy",
+    subtitle: "Annapolis",
+    location: "",
+    degree: "Bachelor of Science 1988",
+    honors: "Systems Operations"
+  }
+];
+
+const experience = [
   {
-    name: "Lic. Roberto Sánchez",
-    role: "Abogado Senior",
-    specialization: "Derecho Fiscal e Inmobiliario",
-    experience: "20 años de experiencia",
-    description: "Especializado en planificación fiscal y transacciones inmobiliarias complejas."
-  },
-  {
-    name: "Dra. Ana Martínez",
-    role: "Abogada Senior",
-    specialization: "Derecho de Familia y Civil",
-    experience: "18 años de experiencia",
-    description: "Dedicada a casos de familia y sucesiones con enfoque humano y profesional."
+    title: "Asst. United States Attorney",
+    organization: "Department of Justice",
+    location: "Southern District of California"
   }
 ];
 
 const Team = () => {
   return (
-    <section id="equipo" className="py-20 bg-gradient-to-b from-secondary/30 to-background">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Nuestro Equipo
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Profesionales altamente cualificados con décadas de experiencia 
-            comprometidos con la excelencia legal.
+    <section id="equipo" className="py-32 bg-gradient-to-b from-secondary/30 to-white">
+      <div className="container mx-auto px-6 max-w-7xl">
+        <div className="text-center mb-24 animate-fade-in-up">
+          <p className="text-accent text-xs md:text-sm tracking-[0.3em] uppercase mb-6" style={{ fontFamily: 'Inter, sans-serif' }}>
+            Credenciales
           </p>
+          <h2 className="text-4xl md:text-6xl font-light text-foreground mb-8" style={{ fontFamily: 'Times New Roman, serif' }}>
+            Curriculum Vitae
+          </h2>
+          <div className="w-20 h-px bg-accent mx-auto"></div>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {team.map((member, index) => (
+        {/* Education Section */}
+        <div className="mb-20">
+          <div className="grid md:grid-cols-2 gap-12">
+            {education.map((edu, index) => (
+              <Card 
+                key={index}
+                className="border border-border/50 hover:border-accent/50 transition-all duration-700 hover:shadow-elegant bg-white animate-fade-in-up"
+                style={{ animationDelay: `${index * 0.15}s` }}
+              >
+                <CardContent className="p-12">
+                  <div className="h-48 bg-white mb-8 flex items-center justify-center border-b border-border/30">
+                    <div className="text-center">
+                      <h3 className="text-2xl font-light text-foreground mb-2" style={{ fontFamily: 'Times New Roman, serif' }}>
+                        {edu.institution}
+                      </h3>
+                      {edu.subtitle && (
+                        <p className="text-base text-muted-foreground font-light mb-1" style={{ fontFamily: 'Inter, sans-serif' }}>
+                          {edu.subtitle}
+                        </p>
+                      )}
+                      {edu.location && (
+                        <p className="text-sm text-muted-foreground/70 font-light" style={{ fontFamily: 'Inter, sans-serif' }}>
+                          {edu.location}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                  <div className="text-center space-y-3">
+                    <p className="text-xl font-light text-foreground" style={{ fontFamily: 'Inter, sans-serif' }}>
+                      {edu.degree}
+                    </p>
+                    <p className="text-lg font-light text-muted-foreground" style={{ fontFamily: 'Inter, sans-serif' }}>
+                      {edu.honors}
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+
+        {/* Experience Section */}
+        <div className="animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+          {experience.map((exp, index) => (
             <Card 
               key={index}
-              className="border-2 hover:border-accent transition-all duration-300 hover:shadow-xl overflow-hidden group"
+              className="border border-border/50 hover:border-accent/50 transition-all duration-700 hover:shadow-elegant bg-white"
             >
-              <div className="h-64 bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center">
-                <div className="text-6xl font-bold text-accent/20">
-                  {member.name.split(' ').map(n => n[0]).join('')}
-                </div>
-              </div>
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold text-foreground mb-1">
-                  {member.name}
+              <CardContent className="p-12 text-center">
+                <h3 className="text-3xl font-light text-foreground mb-6" style={{ fontFamily: 'Times New Roman, serif' }}>
+                  {exp.title}
                 </h3>
-                <p className="text-accent font-semibold mb-2">{member.role}</p>
-                <p className="text-sm text-muted-foreground mb-2">{member.specialization}</p>
-                <p className="text-xs text-muted-foreground font-medium mb-3">{member.experience}</p>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                  {member.description}
+                <div className="w-20 h-px bg-accent mx-auto mb-6"></div>
+                <p className="text-2xl font-light text-foreground mb-2" style={{ fontFamily: 'Inter, sans-serif' }}>
+                  {exp.organization}
                 </p>
-                <div className="flex gap-3">
-                  <button className="p-2 hover:bg-accent/10 rounded-lg transition-colors">
-                    <Linkedin className="h-5 w-5 text-primary" />
-                  </button>
-                  <button className="p-2 hover:bg-accent/10 rounded-lg transition-colors">
-                    <Mail className="h-5 w-5 text-primary" />
-                  </button>
-                </div>
+                <p className="text-lg font-light text-muted-foreground" style={{ fontFamily: 'Inter, sans-serif' }}>
+                  {exp.location}
+                </p>
               </CardContent>
             </Card>
           ))}

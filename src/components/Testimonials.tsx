@@ -3,21 +3,15 @@ import { Quote, Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Juan Pérez",
-    role: "Empresario",
-    content: "Excelente servicio. Resolvieron mi caso mercantil de manera eficiente y profesional. Su experiencia es invaluable.",
+    name: "Dra. Veronica Gonzalez",
+    role: "Derecho Familiar",
+    content: "No sé qué sería de mí sin su ayuda, lo recomiendo sin duda alguna, me orientó y tranquilizó desde el primer momento, es de los pocos abogados honestos y humanos que quedan, es muy profesional y me explicaba todo a detalle, además el trámite fue incluso un poco más rápido de lo que me comentó en un principio.",
     rating: 5
   },
   {
-    name: "María López",
-    role: "Directora de RRHH",
-    content: "El mejor despacho de abogados laborales. Nos han asesorado durante años con resultados excepcionales.",
-    rating: 5
-  },
-  {
-    name: "Roberto García",
-    role: "Propietario",
-    content: "Gestionaron la compra de mi propiedad con absoluta profesionalidad. Muy recomendables.",
+    name: "Federico Gutiérrez",
+    role: "Inmigración",
+    content: "Fue muy amable desde la primera vez que lo contacté. Ofrece asesoría y resuelve dudas de forma clara en cuanto a lo migratorio. Es comprometido, atiende rápido, y se nota que conoce mucho de derecho del tema ya que pudo tramitar mi visa de trabajo muy rápido.",
     rating: 5
   }
 ];
@@ -40,7 +34,7 @@ const Testimonials = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-10">
+        <div className="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
           {testimonials.map((testimonial, index) => (
             <Card 
               key={index}

@@ -23,16 +23,12 @@ const Hero = ({ activeTab, setActiveTab }: HeroProps) => {
       
       <div className="container mx-auto px-4 relative z-10 flex-1 flex flex-col justify-center items-center">
         <div className="max-w-5xl mx-auto text-center">
-          <p className="text-accent text-sm md:text-base tracking-[0.3em] uppercase mb-6 animate-fade-in" style={{ fontFamily: 'Inter, sans-serif' }}>
-            Excelencia Legal
-          </p>
-          
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-light text-white mb-10 leading-tight animate-fade-in-up" style={{ fontFamily: 'Times New Roman, serif', animationDelay: '0.2s' }}>
-            Despacho Legal
+            Servicios legales y Soluciones Jurídicas
           </h1>
           
-          <p className="text-white/90 text-lg md:text-xl font-light max-w-3xl mx-auto mb-12 leading-relaxed animate-fade-in-up" style={{ fontFamily: 'Inter, sans-serif', animationDelay: '0.4s' }}>
-            Ubicados en el corazón de Ciudad de México, ofrecemos soluciones legales estratégicas con más de 25 años de experiencia
+          <p className="text-white/90 text-lg md:text-xl font-light max-w-4xl mx-auto mb-12 leading-relaxed animate-fade-in-up" style={{ fontFamily: 'Inter, sans-serif', animationDelay: '0.4s' }}>
+            Especialista en diversas áreas del derecho: Civil, Mercantil, Familiar, Administrativo, Inmigración y Derecho Federal.
           </p>
           
           <div className="text-white/80 font-light space-y-3 mb-12 animate-fade-in-up" style={{ fontFamily: 'Inter, sans-serif', animationDelay: '0.6s' }}>
